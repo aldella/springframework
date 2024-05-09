@@ -1,0 +1,8 @@
+package com.spring.dto;
+
+@Data
+public class Sample2 {
+	private int num;
+	private String title;
+	private String res;
+}

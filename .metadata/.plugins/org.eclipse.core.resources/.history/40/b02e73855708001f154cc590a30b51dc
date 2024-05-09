@@ -1,0 +1,14 @@
+package com.spring.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.spring.dao.SampleService;
+
+@Controller
+public class SampleController {
+	@Autowired
+	private SampleService sampleService;
+	
+	@GetMapping("/sample/list.do");
+}

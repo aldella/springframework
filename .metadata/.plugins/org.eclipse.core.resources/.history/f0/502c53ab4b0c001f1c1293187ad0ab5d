@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="chair" class="com.spring2.dto.Chair">
+	<property name="price" value="10000">
+	</property>
+</bean>
+
+<bean id="desk" class="com.spring2.dto.Desk">
+	<property name="size" value="10"></property>
+</bean>
+
+<bean id="test5" class="com.spring2.dto.Warehouse">
+	<constructor-arg name="map">
+		<map>
+			<entry>
+				<key><value>test5_map_key1예시</value></key>
+				<value>test5_map_value1예시</value>
+			</entry>
+			<entry key="test5_map_key2예시" value="2" value-type="int"></entry>
+		</map>
+	</constructor-arg>
+</bean>
+
+</beans>

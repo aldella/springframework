@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sample">
+
+	<sample id="getSampleList" resultType="com.spring.dto.Sample">
+		select * from sample
+	</sample>
+	
+	<insert id="insSample">
+		insert into sample values (#{num},#{title},#{res});		
+	</insert>
+
+	<insert id="upSample">
+		update sample set title=#{title} where num=#{num};
+	</insert>
+	
+	<insert id="insSample">
+		insert into sample values (#{num},#{title},#{res});		
+	</insert>
+</mapper>
+<!-- namespace나 해당 명령의 id는 메소드 이름을 의미하며, 중복되면 절대 안된다. -->

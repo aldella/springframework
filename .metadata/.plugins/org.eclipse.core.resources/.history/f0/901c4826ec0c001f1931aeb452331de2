@@ -1,0 +1,5 @@
+package com.spring2.test;
+
+public class TestAutoWired {
+
+}

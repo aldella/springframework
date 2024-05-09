@@ -1,0 +1,21 @@
+package com.spring2.test;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.spring2.service.SampleService;
+
+@Controller
+@RequestMapping("/test/")
+public class TestController {
+	@Autowired
+	private SampleService sampleService;
+	
+	@RequestMapping(value="testList.do", method=RequestMethod.GET)
+	
+	
+	// @GetMapping("testList1.do")
+	
+	
+}

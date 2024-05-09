@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- pencil 객체 생성 -->
+	<bean id="pencil1" class="com.spring2.dto.Pencil">
+		<constructor-arg name="proName" value="A001"></constructor-arg>
+		<constructor-arg name="price" value="1000"></constructor-arg>
+	</bean>
+	
+	<!-- shop 객체 생성 1.생성자주입 2.수정자주입 -->
+	<bean id="shop1" class="com.spring2.dto.Shop">
+		<constructor-arg name="shopName" value="shop1"></constructor-arg>
+		<constructor-arg name="product" ref="pencil1"></constructor-arg>
+	</bean>
+	<bean id="shop2" class="com.spring2.dto.Shop">
+		<property name="shopName" value="shop1"></property>
+		<property name="product" ref="pencil1"></property>
+	</bean>
+	<bean id="shop3" class="com.spring2.dto.Shop">
+		<property name="shopName" value="shop1"></property>
+		<property name="product">
+			<ref bean="pencil"/>
+		</property>
+	</bean>
+</beans>

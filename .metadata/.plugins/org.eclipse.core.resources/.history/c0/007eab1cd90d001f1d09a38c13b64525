@@ -1,0 +1,10 @@
+package com.spring1.dao;
+
+public interface storeDAO {
+	public getStoreList
+	public getStore
+	public maxNum
+	public insStore
+	public upStore
+	public delStore
+}

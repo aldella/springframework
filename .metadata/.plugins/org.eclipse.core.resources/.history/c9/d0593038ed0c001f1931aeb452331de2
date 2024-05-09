@@ -1,0 +1,19 @@
+package com.spring2.test;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import com.spring2.dao.SampleDAO;
+import com.spring2.dao.SampleDAOImp1;
+
+public class TestQualifier {
+
+	@Autowired
+	@Qualifier("sqlSession")
+	private SqlSessionTemplate sqlSessionTemplate;
+	
+	public TestQualifier() {
+		this.sampleDAO = new SampleDAOImp1();
+	}
+}

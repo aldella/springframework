@@ -1,0 +1,11 @@
+package com.spring1.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TestController3 {
+	@GetMapping("api1")
+	public Store getApi1() {
+		
+	}
+}

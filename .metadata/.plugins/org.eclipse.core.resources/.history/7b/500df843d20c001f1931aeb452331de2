@@ -1,0 +1,17 @@
+package com.spring2.test;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class InjectionAnnotationTest1 {
+	
+	@Autowired
+	private InjectionAnnotation1 obj1;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

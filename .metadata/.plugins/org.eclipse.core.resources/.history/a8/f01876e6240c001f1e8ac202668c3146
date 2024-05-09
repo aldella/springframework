@@ -1,0 +1,14 @@
+package com.spring2.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import com.spring2.dto.Store;
+
+public class InjectionTest1 {
+	public static void main(String[] args) {
+		ApplicationContext ctx1 = new GenericXmlApplicationContext("classpath:InjectionContext.xml");
+		Store store1 = ctx1.getBean("store1", Store.class);
+		System.out.println(store1.toString());
+	}
+}

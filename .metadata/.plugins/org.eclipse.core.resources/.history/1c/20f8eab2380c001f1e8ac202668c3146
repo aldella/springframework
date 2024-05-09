@@ -1,0 +1,11 @@
+package com.spring2.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Pencil {
+	private String proName;
+	private int price;
+}

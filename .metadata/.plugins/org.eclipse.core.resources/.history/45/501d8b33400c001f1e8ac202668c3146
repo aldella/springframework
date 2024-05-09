@@ -1,0 +1,6 @@
+package com.spring2.dto;
+
+public class Market {
+	private String marketName;
+	private List<Goods> goodsList;
+}

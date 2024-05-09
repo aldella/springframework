@@ -1,0 +1,43 @@
+package com.spring2.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.spring2.dto.Sample;
+
+@Repository
+public class SampleDAOImp1 implements SampleDAO{
+	
+	@Autowired
+	private SqlSession sqlSession;
+
+	@Override
+	public List<Sample> getSampleList() {
+		return null;
+	}
+
+	@Override
+	public Sample getSample(int num) {
+		return null;
+	}
+
+	@Override
+	public void insSample(Sample sample) {
+		
+	}
+
+	@Override
+	public void upSample(Sample sample) {
+		
+	}
+
+	@Override
+	public void delSample(Sample sample) {
+		
+	}
+	
+	
+}

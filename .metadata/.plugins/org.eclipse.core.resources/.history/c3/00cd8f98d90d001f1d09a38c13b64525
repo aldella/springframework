@@ -1,0 +1,45 @@
+package com.spring1.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.spring1.dto.Store;
+
+public class StoreDAOImp1 implements StoreDAO {
+	
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@Override
+	public List<Store> getStoreList() {
+		return sqlSession.selectList("store.getStoreList");
+	}
+
+	@Override
+	public Store getStore(int storeNum) {
+		return sqlSession.selectOne("store.getStore", storeNum);
+	}
+
+	@Override
+	public int maxNum() {
+		return 0;
+	}
+
+	@Override
+	public void insStore(Store store) {
+		
+	}
+
+	@Override
+	public void upStore(Store store) {
+		
+	}
+
+	@Override
+	public void delStore(Store store) {
+		
+	}
+
+}

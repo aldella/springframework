@@ -1,0 +1,21 @@
+package com.spring2.test;
+
+import javax.annotation.Resource;
+
+import javax.annotation.Resource;
+
+import javax.annotation.Resource;
+
+import javax.annotation.Resource;
+
+import javax.annotation.Resource;
+
+import javax.annotation.Resource;
+
+import com.spring2.dao.SampleDAO;
+
+public class TestResource {
+	@Resource(name="testDAO")
+	private SampleDAO sampleDAO;
+	
+}

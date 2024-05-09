@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<c:set var="path0" value="<%=request.getContextPath()%>" />
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<form name="ins">
+		<input type="number" name="storeNum" id="storeNum" placeholder="번호 입력" /><br>
+		<input type="text" name="storeName" id="storeName" placeholder="상점이름 입력" /><br>
+		<button type="button" id="btn1"></button>
+	</form>
+
+	<script>
+		$(document).ready(function() {
+			$("#btn1").click( function() {
+				var store = {
+						"storeNum":$("#storeNum").val(),
+						"storeName":$("#storeName").val()
+						};
+				$.ajax({
+					type:"post", 
+					url:`${path0/api/api5.do}`, 
+					data:store, 
+					success:function(res){console.log("성공"+res);}, 
+					error:function(err){console.log("실패"+err);}
+					});
+				}	//function(){}닫는부분
+			); //click() 닫는부분
+		}); //ready() 닫는부분
+	</script>
+</body>
+</html>
