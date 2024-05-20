@@ -1,8 +1,0 @@
-package com.spring2.test;
-
-import com.spring2.dto.Shop;
-
-public class InjectionAnnotation2 {
-	private Shop shopBean1;
-	private Shop shopBean2;
-}

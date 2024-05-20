@@ -1,6 +1,0 @@
-package com.spring2.test;
-
-public class InjectionAnnotation4 {
-	private int data;
-	private String data2;
-}

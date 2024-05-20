@@ -1,9 +1,0 @@
-package com.spring2.test;
-
-import com.spring2.dao.SampleDAO;
-
-public class TestResource {
-	@Resource(name="testDAO")
-	private SampleDAO sampleDAO;
-	
-}

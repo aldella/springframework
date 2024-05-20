@@ -1,5 +1,0 @@
-package com.spring1.vo;
-
-public class Maker {
-	private String part;
-}

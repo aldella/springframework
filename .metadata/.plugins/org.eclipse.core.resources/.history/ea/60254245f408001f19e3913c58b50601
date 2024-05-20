@@ -1,8 +1,0 @@
-package com.spring2.dao;
-
-import java.util.List;
-
-public interface SampleDAO {
-	public List<Sample> getSampleList();
-	
-}

@@ -1,8 +1,0 @@
-package com.spring2.test;
-
-import org.springframework.stereotype.Service;
-
-@Service
-public class InjectionJavaTest1 {
-	private InjectionJavaImp1 injectionJava1;
-}

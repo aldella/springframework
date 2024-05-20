@@ -1,6 +1,0 @@
-package com.spring2.dao;
-
-@Repository
-public class SampleDAOImp1 {
-	
-}

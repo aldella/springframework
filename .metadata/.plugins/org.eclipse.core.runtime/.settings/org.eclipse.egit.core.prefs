@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=D\:\\taeyeong\\sts\\springframework\\spring1\\.git;D\:\\taeyeong\\sts\\springframework_t\\.git;
-GitRepositoriesView.GitDirectories.relative=spring1\\.git;D\:\\taeyeong\\sts\\springframework_t\\.git;
+GitRepositoriesView.GitDirectories=D\:\\taeyeong\\sts\\springframework\\.git;D\:\\taeyeong\\sts\\springframework\\spring1\\.git;D\:\\taeyeong\\sts\\springframework_t\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;spring1\\.git;D\:\\taeyeong\\sts\\springframework_t\\.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
