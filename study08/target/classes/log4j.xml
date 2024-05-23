@@ -33,10 +33,6 @@
 		<level value="info" />
 	</logger>
 	
-	<logger name="com.spring1.aop">
-		<level value="trace" />
-	</logger>
-	
 	<logger name="com.spring1.service">
 		<level value="info" />
 	</logger>

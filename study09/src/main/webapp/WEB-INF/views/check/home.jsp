@@ -12,15 +12,16 @@
 <title>메인 페이지</title>
 </head>
 <body>
-	<h1>Form 검증</h1>
-	<ul>
-		<li><a href="${path2 }/check/check1.do">check1 테스트</a></li>
-		<li><a href="${path2 }/check/check2.do">check2 테스트</a></li>
-		<li><a href="${path2 }/check/check3.do">check3 테스트</a></li>
-		<li><a href="${path2 }/check/check4.do">check4 테스트</a></li>
-		<li><a href="${path2 }/check/check5.do">check5 테스트</a></li>
-		<li><a href="${path2 }/check/check6.do">check6 테스트</a></li>
-	</ul>
+	<h2>Form 검증</h2>
 	<hr>
+	<ul>
+		<li><a href="${path2 }/check/check1.do">Check 폼 검증 테스트1</a></li>
+		<li><a href="${path2 }/check/check2.do">Check 폼 검증 테스트2</a></li>
+		<li><a href="${path2 }/check/check3.do">Check 폼 검증 테스트3</a></li>
+		<li><a href="${path2 }/check/check4.do">Check 폼 검증 테스트4</a></li>
+		<li><a href="${path2 }/check/check5.do">Check 폼 검증 테스트5</a></li>
+		<li><a href="${path2 }/check/check6.do">Check 폼 검증 테스트6</a></li>
+	</ul>
+	<hr>	
 </body>
 </html>

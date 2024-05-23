@@ -20,26 +20,6 @@
 	<ul>
 		<li><a href="${path2 }/test/testList.do">테스트 목록</a></li>
 		<li><a href="${path2 }/test/testList2.do">테스트 목록2</a></li>
-		<li><a href="${path2 }/test2/get1.do?num=1&title=get1테스트">get1테스트</a></li>
-		<li><a href="${path2 }/test2/get2.do?num=2&title=get2테스트">get2테스트</a></li>
-		<li><a href="${path2 }/test2/get3.do?num=3&title=get3테스트">get3테스트</a></li>
-		<li><a href="${path2 }/test2/get4.do/4/get4테스트">get4테스트</a></li>
-		<li><a href="${path2 }/test2/get5.do?num=5&title=get5테스트">get5테스트</a></li>
 	</ul>	
-	<ul>
-		<li><a href="${path2 }/test2/post.do">post1테스트</a></li>
-	</ul>	
-	<ul>
-		<li><a href="${path2 }/api/api1.do">API1 테스트</a></li>
-		<li><a href="${path2 }/api/api2.do">API2 테스트</a></li>
-		<li><a href="${path2 }/api/api3.do">API3 테스트</a></li>
-		<li><a href="${path2 }/api/api4.do">API4 테스트</a></li>
-		<li><a href="${path2 }/api/sub/api5">API5 테스트</a></li>
-		<li><a href="${path2 }/api/sub/api6">API6 테스트</a></li>
-		<li><a href="${path2 }/api/sub/api7">API7 테스트</a></li>
-		<li><a href="${path2 }/api/sub/api8">API8 테스트</a></li>
-		<li><a href="${path2 }/api/sub/api9">API9 테스트</a></li>
-		<li><a href="${path2 }/api/sub/api10">API10 테스트</a></li>
-	</ul>
 </body>
 </html>

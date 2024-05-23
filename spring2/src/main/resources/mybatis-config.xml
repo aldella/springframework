@@ -4,6 +4,6 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<package name="com.spring2" />
+		<package name="com.spring1" />
 	</typeAliases>
 </configuration>

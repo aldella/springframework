@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="log4"/>
+		<item key="selection" value="artifact"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="true"/>
 		<item key="incremental" value="true"/>
 		<item key="isRegEx" value="true"/>
 		<list key="findhistory">
+			<item value="artifact`"/>
+			<item value="artifact"/>
 			<item value="log4"/>
 			<item value="myba"/>
 			<item value="modelattribute"/>
@@ -21,8 +23,6 @@
 			<item value="storeNum"/>
 			<item value="requestbody"/>
 			<item value="view"/>
-			<item value="com"/>
-			<item value="spring"/>
 		</list>
 		<list key="replacehistory">
 			<item value="ajax"/>
@@ -34,7 +34,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1547"/>
+		<item key="DIALOG_X_ORIGIN" value="1162"/>
 		<item key="DIALOG_Y_ORIGIN" value="549"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>

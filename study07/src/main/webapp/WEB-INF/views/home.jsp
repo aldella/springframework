@@ -19,7 +19,6 @@
 	<ul>
 		<li><a href="${path2 }/ajax/">AJAX 테스트</a></li>
 		<li><a href="${path2 }/ajax2/">AJAX2 테스트</a></li>
-		<li><a href="${path2 }/ajax3/">AJAX2 테스트</a></li>
 	</ul>
 	<hr>	
 </body>

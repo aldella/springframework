@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원 정보 보기</title>
+    <title>회원 정보 수정</title>
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="resources/css/normalize.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
@@ -29,54 +29,89 @@
 <div class="content" id="con">
     <div class="row column text-center">
         <div class="container">
-            <div class="table_form_wrap">
-                <table class="table_form">
-                    <tbody>
-	                    <tr>
-	                        <th>아이디</th>
-	                        <td>${cus.id }</td>
-	                        </td>
-	                    </tr>
-	                    <tr>
-	                        <th>비밀번호</th>
-	                        <td>********</p>
-	                        </td>
-	                    </tr>
-	                    <tr>
-	                        <th>이름</th>
-	                        <td>${cus.name }</td>
-	                    </tr>
-	                    <tr>
-	                        <th>이메일</th>
-	                        <td>${cus.email }</td>
-	                    </tr>
-	                    <tr>
-	                        <th>전화번호</th>
-	                        <td>${cus.tel }</td>
-	                    </tr>
-	                    <tr>
-	                        <th>주소</th>
-	                        <td>
-	                            ${cus.addr }
-	                        </td>
-	                    </tr>
-	                    <tr>
-	                        <td colspan="2">
-	                            <c:if test="${cus.id=='admin' }">
-	                                <a href="${path1 }/admin/customDelete.do?id=${aid }" class="button btn-primary">직권 강퇴</a>
-	                            </c:if>
-	                            <c:if test="${!empty cus.id }">
-	                            	<a href="${path1 }/custom/myUpdate.do" class="button btn-primary">회원 정보수정</a>
-	                                <a href="${path1 }/custom/customDelete.do?id=${cus.id }" class="button btn-primary">회원 탈퇴</a>
-	                            </c:if>
-	                            <c:if test="${cus.id=='admin' }">
-	                                <a href="${path1 }/admin/customList.do" class="button btn-primary">회원 목록</a>
-	                            </c:if>
-	                        </td>
-	                    </tr>
-                    </tbody>
-                </table>
-            </div>
+            <c:if test="${sid=='admin' }">
+                <h2 class="page_tit">회원 정보 수정</h2>
+            </c:if>
+            <c:if test="${sid!='admin' }">
+                <h2 class="page_tit">마이 페이지</h2>
+            </c:if>
+            <hr>
+            <form action="${path1 }/custom/myUpdatePro.do" method="post" onsubmit="return updateCheck(this)">
+                <div class="table_form_wrap">
+                    <table class="table_form">
+                        <tbody>
+                        <tr>
+                            <th><label for="id">아이디</label></th>
+                            <td><input type="text" name="id" id="id" size="100" class="single100" value="${cus.id }" readonly required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="pw">비밀번호</label></th>
+                            <td><input type="password" name="pw" id="pw"  class="single100" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                                <p>(최소 8자리에서 최대 16자리까지, 숫자, 영문 대소문자, 특수문자가 각 1 문자 이상 포함되어야 함)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="pw2">비밀번호 확인</label></th>
+                            <td><input type="password" name="pw2" id="pw2"  class="single100" value="" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="name">이름</label></th>
+                            <td><input type="text" name="name" id="name" class="single100"  value="${cus.name }" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="email">이메일</label></th>
+                            <td><input type="email" name="email" id="email" class="single100" value="${cus.email }" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="tel">전화번호</label></th>
+                            <td><input type="tel" name="tel" id="tel" class="single100"  value="${cus.tel }" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="" onclick="findAddr()">주소</label></th>
+                            <td>
+                                <input type="text" name="addr1" id="addr1" class="single100" value="${addr1 }"><br>
+                                <input type="text" name="addr2" id="addr2" class="single100" value="${addr2 }"><br>
+                                <input type="text" name="postcode" id="postcode"  class="single40" value="${cus.postcode }">
+                                <input type="button" value="주소찾기" onclick="findAddr()" class="btn btn-primary">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" class="button btn-writer" value="회원정보수정">
+                                <a href="${path1 }/custom/myInfo.do" class="button btn-primary">취소</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+            <script>
+                function updateCheck(f){
+                    if(f.userpw.value!=f.userpw2.value){
+                        alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+                        return false;
+                    }
+                }
+            </script>
+            <script>
+                function findAddr() {
+                    new daum.Postcode({
+                        oncomplete: function(data) {
+                            console.log(data);
+                            var roadAddr = data.roadAddress;
+                            var jibunAddr = data.jibunAddress;
+                            document.getElementById("postcode").value = data.zonecode;
+                            if(roadAddr !== '') {
+                                document.getElementById("addr1").value = roadAddr;
+                            } else if(jibunAddr !== ''){
+                                document.getElementById("addr1").value = jibunAddr;
+                            }
+                        }
+                    }).open();
+                }
+            </script>
+            <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
         </div>
     </div>
 </div>
